@@ -38,11 +38,12 @@ public class PatternModel {
 		  
 		  for(int i = 0, j = 1,m=2,n=3; i < sites.size() && j < sites.size()&&m<sites.size()&&n<sites.size(); i=i+4, j=j+4,m=m+4,n=n+4) {
 			  
-			  StudentModel SM=new StudentModel(Integer.parseInt(sites.get(i).toString()),sites.get(i).toString(),Integer.parseInt(sites.get(m).toString()),Integer.parseInt(sites.get(n).toString()));
+			  StudentModel SM=new StudentModel(Integer.parseInt(sites.get(i).toString()),sites.get(j).toString(),Integer.parseInt(sites.get(m).toString()),Integer.parseInt(sites.get(n).toString()));
 			  
-			
+			  System.out.println("Studen_ID: "+SM.ID+" "+"Student_Name: "+SM.Name+" "+"Stuent Math_Mark: "+SM.Math_Mark+" "+"Student Science Mark: "+SM.Science_Mark);
 			  
 		  }
+	
 	
 		
 
