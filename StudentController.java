@@ -25,8 +25,6 @@ public class StudentController {
 	      
 	      ResultSet rs = preparedStatement.executeQuery();
 	      
-	      Object[] arr =new Object[4];
-	      
 	      ArrayList<Object> sites = new ArrayList<Object>();
 	 
 	        //，rs.next() return true
@@ -47,6 +45,28 @@ public class StudentController {
 	
 		
     }
+    
+    public  void insert_value(Statement stmt,Connection conn,int number,String number1,int number2,int number3) throws ClassNotFoundException, SQLException {
+    	
+        
+        String sql="INSERT INTO student(ID,Name,Math_Mark,Science_Mark)VALUES(?,?,?,?)";
+   
+        PreparedStatement preparedStatement = conn.prepareStatement(sql);
+   
+        preparedStatement.setInt(1, number);
+   
+       preparedStatement.setString(2, number1);
+       
+       preparedStatement.setInt(3, number2);
+       
+       preparedStatement.setInt(4, number3);
+   
+       preparedStatement.executeUpdate();
+        
+      
+   		
+  		
+  	} 
     
     
 
